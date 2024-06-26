@@ -1,8 +1,8 @@
 import 'package:bookly_app/Features/home/views/widgets/custom_listView_item.dart';
 import 'package:flutter/material.dart';
 
-class FeaturedBoxListView extends StatelessWidget {
-  const FeaturedBoxListView({
+class FeaturedBooksListView extends StatelessWidget {
+  const FeaturedBooksListView({
     super.key,
   });
 
@@ -15,10 +15,7 @@ class FeaturedBoxListView extends StatelessWidget {
         scrollDirection: Axis.horizontal,
         
         itemBuilder: (context, index) {
-        return const Padding(
-          padding:  EdgeInsets.symmetric(horizontal: 8),
-          child: CustomListViewItem(),
-        );
+        return CustomListViewItem();
     
       },),
     );
