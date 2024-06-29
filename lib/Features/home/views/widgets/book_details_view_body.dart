@@ -1,38 +1,40 @@
+import 'package:bookly_app/Features/home/views/widgets/book_details_section.dart';
+import 'package:bookly_app/Features/home/views/widgets/custom_appBar_book_details.dart';
+import 'package:bookly_app/Features/home/views/widgets/similer_book_section.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
   const BookDetailsViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
+    return  const Padding(
       padding:  EdgeInsets.symmetric(horizontal: 30),
-      child:  Column(
-        children: [
-          CustomAppBarBookDetails()
-        ],
-      ),
-    );
-  }
-}
+      child:  CustomScrollView(
 
-class CustomAppBarBookDetails extends StatelessWidget {
-  const CustomAppBarBookDetails({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return  Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        IconButton(onPressed: () {
-          
-        }, icon: const Icon(Icons.close),
-        
+        slivers: [
+          SliverFillRemaining(
+            child:  Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            CustomAppBarBookDetails(),
+            SizedBox(height: 20,),
+            BookDetailsSection(),
+            Expanded(child: SizedBox(height: 50,)),
+            
+            similerBookSection()
+            
+            
+            
+          ],
         ),
     
-        IconButton(onPressed: (){}, icon: const Icon(Icons.shopping_cart_outlined))
-      ],
+          )
+        ],  ),
     );
   }
 }
+

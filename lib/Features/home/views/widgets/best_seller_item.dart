@@ -1,4 +1,5 @@
 
+import 'package:bookly_app/Features/home/views/widgets/custom_book_rate.dart';
 import 'package:bookly_app/core/assets.dart';
 import 'package:bookly_app/core/utils/router_app.dart';
 import 'package:bookly_app/core/utils/styles.dart';
@@ -48,12 +49,7 @@ class BestSellerItem extends StatelessWidget {
                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                    children: [
                      Text('19.99',style: Styles.textStyle16.copyWith(fontWeight: FontWeight.bold),),
-                     const Row(
-                       children: [
-                         Icon(Icons.star,color: Colors.yellow,),
-                         Text('4.8 (2390)'),
-                       ],
-                     )
+                     CustomBookRate()
                    ],
                  )
                       
@@ -69,5 +65,4 @@ class BestSellerItem extends StatelessWidget {
     );
   }
 }
-
 
