@@ -1,6 +1,6 @@
-import 'package:bookly_app/Features/home/views/book_details_view.dart';
-import 'package:bookly_app/Features/home/views/home_view.dart';
-import 'package:bookly_app/Features/search/view/search_view.dart';
+import 'package:bookly_app/Features/home/prsentation/views/book_details_view.dart';
+import 'package:bookly_app/Features/home/prsentation/views/home_view.dart';
+import 'package:bookly_app/Features/search/presentation/view/search_view.dart';
 import 'package:bookly_app/Features/splash/presentation/views/Splash_view.dart';
 import 'package:go_router/go_router.dart';
 
